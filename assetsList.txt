@@ -1,0 +1,5 @@
+1. Create the following folder in Assets: ImportedAssets
+2. Import the following assets from the store:
+
+	-Japanese School
+	-JRPG Character Pack
