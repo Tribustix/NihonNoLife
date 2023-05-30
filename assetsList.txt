@@ -1,5 +1,9 @@
 1. Create the following folder in Assets: ImportedAssets
 2. Import the following assets from the store:
 
+	-Bakery Interior Game Assets
+	-Japanese Arcade
+	-Japanese Interior Essentials
 	-Japanese School
 	-JRPG Character Pack
+	-Osaka City Game Assets
