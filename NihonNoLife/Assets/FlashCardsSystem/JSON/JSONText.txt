@@ -1,0 +1,38 @@
+{
+	"FlashCards": [
+		{
+			"español": "japones"
+			"español": "japones"
+			"español": "japones"
+			
+		},
+		{
+			"español": "japones"
+			"español": "japones"
+			"español": "japones"
+			
+		},
+		{
+			"español": "japones"
+			"español": "japones"
+			"español": "japones"
+			
+		},
+		{
+			"español": "japones"
+			"español": "japones"
+			"español": "japones"
+			
+		},
+		{
+			"español": "japones"
+			"español": "japones"
+			"español": "japones"
+			
+		},
+	
+	
+	
+	] 
+
+}
