@@ -2767,7 +2767,7 @@ GameObject:
   - component: {fileID: 888591733}
   - component: {fileID: 888591732}
   m_Layer: 0
-  m_Name: Japanese Academy
+  m_Name: SekaArcadeGameCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
