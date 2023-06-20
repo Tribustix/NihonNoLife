@@ -13,17 +13,22 @@ public class Inventory : MonoBehaviour
     public GameObject inventoryWindow;
     public Transform dropPosition;
 
+    public ItemData itemToAddK;
+    public ItemData itemToAddL;
+
     [Header("Selected Item")]
     private ItemSlot selectedItem;
     private int selectedItemIndex;
     public TextMeshProUGUI selectedItemName;
+    public TextMeshProUGUI selectedItemType;
     public TextMeshProUGUI selectedItemDescription;
-    public TextMeshProUGUI selectedItemStatNames;
-    public TextMeshProUGUI selectedItemStatValues;
+    public Image selectedItemIcon;
+    //public TextMeshProUGUI selectedItemStatNames;
+    //public TextMeshProUGUI selectedItemStatValues;
     public GameObject useButton;
-    public GameObject equipButton;
-    public GameObject unEquipButton;
-    public GameObject dropButton;
+    //public GameObject equipButton;
+    //public GameObject unEquipButton;
+    //public GameObject dropButton;
 
     private int curEquipIndex;
 
@@ -63,7 +68,19 @@ public class Inventory : MonoBehaviour
         ClearSelectedItemWindow();
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            AddItem(itemToAddK);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AddItem(itemToAddL);
+        }
+    }
+
     public void Toggle()
     {
         if (IsOpen())
@@ -164,23 +181,25 @@ public class Inventory : MonoBehaviour
         selectedItem = slots[index];
         selectedItemIndex = index;
         selectedItemName.text = selectedItem.item.displayName;
+        selectedItemType.text = selectedItem.item.type.ToString();
         selectedItemDescription.text = selectedItem.item.description;
+        selectedItemIcon.sprite = selectedItem.item.icon;
 
         //set stat values and stat names
-        selectedItemStatNames.text = string.Empty;
-        selectedItemStatValues.text = string.Empty;
+        //selectedItemStatNames.text = string.Empty;
+        //selectedItemStatValues.text = string.Empty;
 
-        for (int i = 0; i < selectedItem.item.consumables.Length; i++)
-        {
-            selectedItemStatNames.text += selectedItem.item.consumables[i].type.ToString() + "\n";
-            selectedItemStatValues.text += selectedItem.item.consumables[i].value.ToString() + "\n";
-        }
+        //for (int i = 0; i < selectedItem.item.consumables.Length; i++)
+        //{
+        //    selectedItemStatNames.text += selectedItem.item.consumables[i].type.ToString() + "\n";
+        //    selectedItemStatValues.text += selectedItem.item.consumables[i].value.ToString() + "\n";
+        //}
 
         //activating the right hand side buttons depending on item type
         useButton.SetActive(selectedItem.item.type == ItemType.Consumable);
-        equipButton.SetActive(selectedItem.item.type == ItemType.Equipable && !uiSlots[index].equipped);
-        unEquipButton.SetActive(selectedItem.item.type == ItemType.Equipable && uiSlots[index].equipped);
-        dropButton.SetActive(true);
+        //equipButton.SetActive(selectedItem.item.type == ItemType.Equipable && !uiSlots[index].equipped);
+        //unEquipButton.SetActive(selectedItem.item.type == ItemType.Equipable && uiSlots[index].equipped);
+        //dropButton.SetActive(true);
 
     }
 
@@ -190,14 +209,14 @@ public class Inventory : MonoBehaviour
         selectedItem = null;
         selectedItemName.text = string.Empty;
         selectedItemDescription.text = string.Empty;
-        selectedItemStatNames.text = string.Empty;
-        selectedItemStatValues.text = string.Empty;
+        //selectedItemStatNames.text = string.Empty;
+        //selectedItemStatValues.text = string.Empty;
 
         //disable buttons
         useButton.SetActive(false);
-        equipButton.SetActive(false);
-        unEquipButton.SetActive(false);
-        dropButton.SetActive(false);
+        //equipButton.SetActive(false);
+        //unEquipButton.SetActive(false);
+        //dropButton.SetActive(false);
     }
 
     //called when the "Use" button is pressed

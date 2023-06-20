@@ -8,23 +8,14 @@ public class ItemSlotUI : MonoBehaviour
 {
     public Button button;
     public Image icon;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI typeText;
     public TextMeshProUGUI quantityText;
     private ItemSlot curSlot;
-    private Outline outline;
 
     public int index;
-    public bool equipped;
 
-    private void Awake()
-    {
-        outline = GetComponent<Outline>();
-    }
-
-    private void OnEnable()
-    {
-        //outline the items we have equipped
-        outline.enabled = equipped;
-    }
+    
 
     //sets the item to be displayed in the slot
     public void Set(ItemSlot slot)
@@ -34,12 +25,10 @@ public class ItemSlotUI : MonoBehaviour
 
         icon.gameObject.SetActive(true);
         icon.sprite = slot.item.icon;
+        nameText.text = slot.item.name;
+        typeText.text = slot.item.type.ToString();
         quantityText.text = slot.quantity > 1 ? slot.quantity.ToString() : string.Empty;
 
-        if (outline != null)
-        {
-            outline.enabled = equipped;
-        }
     }
 
     //clears the item slot
@@ -48,6 +37,8 @@ public class ItemSlotUI : MonoBehaviour
         curSlot = null;
 
         icon.gameObject.SetActive(false);
+        nameText.text = string.Empty;
+        typeText.text = string.Empty;
         quantityText.text = string.Empty;
     }
 
