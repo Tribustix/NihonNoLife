@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slider : MonoBehaviour
+public class FlashCardSlider: MonoBehaviour
 {
     public GameObject ContainerPanel;
     public GameObject[] Panels;
