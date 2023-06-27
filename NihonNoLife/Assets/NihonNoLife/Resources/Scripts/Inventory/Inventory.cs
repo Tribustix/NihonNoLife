@@ -70,6 +70,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+        //adding items with button press to test inventory functionality
         if (Input.GetKeyDown(KeyCode.K))
         {
             AddItem(itemToAddK);
