@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 
 public class SmartphoneController : MonoBehaviour
 {
@@ -12,16 +14,12 @@ public class SmartphoneController : MonoBehaviour
     [SerializeField] TMP_Text batteryPercTextValue;
 
     [Header("Mobile Phone Time")]
-    [SerializeField] int startHours;
-    [SerializeField] int startMinutes;
-    [SerializeField] TMP_Text hoursTextUI;
-    [SerializeField] TMP_Text minutesTextUI;
+    [SerializeField] TMP_Text hourTextUI;
 
 
     private void Start()
     {
-        hoursTextUI.text = startHours.ToString("0");
-        minutesTextUI.text = startMinutes.ToString("0");
+        hourTextUI.text = DateTime.Now.ToString("hh:mm");
 
         BatteryLevelSlider(batteryStartValue);
         batteryLevelSlider.value = batteryStartValue;
@@ -29,6 +27,6 @@ public class SmartphoneController : MonoBehaviour
 
     public void BatteryLevelSlider(float batteryLevel)
     {
-        batteryPercTextValue.text = batteryLevel.ToString("0");
+        batteryPercTextValue.text = batteryLevel.ToString("0") + " %";
     }
 }

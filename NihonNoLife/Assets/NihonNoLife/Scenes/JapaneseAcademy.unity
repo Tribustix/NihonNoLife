@@ -594,6 +594,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
+--- !u!1 &206472478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8921152914847732013, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+  m_PrefabInstance: {fileID: 272952876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &272952876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,6 +606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1468507166, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: smartphone
+      value: 
+      objectReference: {fileID: 206472478}
     - target: {fileID: 2596276006358900503, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
