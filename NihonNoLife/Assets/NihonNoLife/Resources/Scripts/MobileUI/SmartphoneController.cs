@@ -16,6 +16,11 @@ public class SmartphoneController : MonoBehaviour
     [Header("Mobile Phone Time")]
     [SerializeField] TMP_Text hourTextUI;
 
+    [Header("Apps")]
+    [SerializeField] GameObject[] apps;
+
+    [Header("Mobile UI Title")]
+    public TMP_Text title;
 
     private void Start()
     {
@@ -28,5 +33,15 @@ public class SmartphoneController : MonoBehaviour
     public void BatteryLevelSlider(float batteryLevel)
     {
         batteryPercTextValue.text = batteryLevel.ToString("0") + " %";
+    }
+
+    public void CloseAllApps()
+    {
+        foreach(GameObject app in apps)
+        {
+            app.SetActive(false);
+        }
+
+        title.text = "MOBILE MENU";
     }
 }
