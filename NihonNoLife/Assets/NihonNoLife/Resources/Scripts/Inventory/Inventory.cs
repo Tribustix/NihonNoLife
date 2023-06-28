@@ -64,8 +64,6 @@ public class Inventory : MonoBehaviour
             uiSlots[i].index = i;
             uiSlots[i].Clear();
         }
-
-        ClearSelectedItemWindow();
     }
 
     private void Update()
@@ -93,7 +91,6 @@ public class Inventory : MonoBehaviour
         {
             inventoryWindow.SetActive(true);
             onOpenInventory.Invoke();
-            ClearSelectedItemWindow();
         }
     }
 
