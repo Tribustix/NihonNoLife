@@ -64,8 +64,6 @@ public class Inventory : MonoBehaviour
             uiSlots[i].index = i;
             uiSlots[i].Clear();
         }
-
-        ClearSelectedItemWindow();
     }
 
     private void Update()
@@ -93,7 +91,6 @@ public class Inventory : MonoBehaviour
         {
             inventoryWindow.SetActive(true);
             onOpenInventory.Invoke();
-            ClearSelectedItemWindow();
         }
     }
 
@@ -197,7 +194,7 @@ public class Inventory : MonoBehaviour
         //}
 
         //activating the right hand side buttons depending on item type
-        useButton.SetActive(selectedItem.item.type == ItemType.Consumable);
+        //useButton.SetActive(selectedItem.item.type == ItemType.Consumable);
         //equipButton.SetActive(selectedItem.item.type == ItemType.Equipable && !uiSlots[index].equipped);
         //unEquipButton.SetActive(selectedItem.item.type == ItemType.Equipable && uiSlots[index].equipped);
         //dropButton.SetActive(true);
