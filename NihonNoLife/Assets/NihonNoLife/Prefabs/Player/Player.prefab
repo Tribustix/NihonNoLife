@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1468507166}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 358b8ece5e964434eabf07b69b59d21f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32fd800b81d063b4a98ae393b875f51e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010743141, y: 0.014797211}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.17529106, y: 0.64593315}
   m_EdgeRadius: 0
 --- !u!50 &5342395394729263338
 Rigidbody2D:
@@ -171,6 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   movement: {x: 0, y: 0}
+  smartphone: {fileID: 4508716236463057136, guid: 3612e0ca3fcff00419ecd89a5ead7426, type: 3}
+  startingPosition: {fileID: 11400000, guid: b9f08b484ac3ddc4cab8446c9c714f71, type: 2}
 --- !u!1001 &4997976099374381533
 PrefabInstance:
   m_ObjectHideFlags: 0

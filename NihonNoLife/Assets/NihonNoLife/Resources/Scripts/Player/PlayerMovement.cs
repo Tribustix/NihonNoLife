@@ -13,11 +13,14 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject smartphone;
 
+    public VectorValue startingPosition;
+
     private void Start() 
     {
-        
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        transform.position = startingPosition.initialValue;     
     }
 
     private void Update() 
