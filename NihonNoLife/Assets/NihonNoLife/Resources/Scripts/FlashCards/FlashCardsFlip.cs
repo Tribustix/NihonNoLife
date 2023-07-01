@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class FlipEspJap
@@ -18,7 +19,7 @@ public class FlashCardsFlip : MonoBehaviour
 {
 
     public RectTransform r;
-    public Text cardText;
+    public TMP_Text cardText;
 
     public FlipEspJap[] flipEspJap = new FlipEspJap[5]; 
 
@@ -57,7 +58,7 @@ public class FlashCardsFlip : MonoBehaviour
             timeCount += Time.deltaTime;
             if ((timeCount >= flipTime) && (isShrinking < 0))
             {
-                isShrinking = 1; //make it grow
+                isShrinking = 1;
                 timeCount = 0;
                 if (faceSide ==0)
                 {
@@ -84,9 +85,12 @@ public class FlashCardsFlip : MonoBehaviour
 
     public void FlipCard() 
     {
-        timeCount = 0;
-        isFlipping = true;
-        isShrinking = -1;
-    
+        if(!isFlipping)
+        {
+            timeCount = 0;
+            isFlipping = true;
+            isShrinking = -1;
+
+        }
     }
 }
