@@ -33807,7 +33807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6c9e4102d92e2479efb0e7e3e0f420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 1
+  sceneBuildIndex: 0
   playerPosition: {x: 18.96, y: -4.32}
   playerStorage: {fileID: 11400000, guid: b9f08b484ac3ddc4cab8446c9c714f71, type: 2}
 --- !u!61 &806473821
@@ -33943,6 +33943,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f3b57a65537ef48b9581e95215a60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &924367293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5039873737093382655, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+  m_PrefabInstance: {fileID: 2075550915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &982999057
 GameObject:
   m_ObjectHideFlags: 0
@@ -64099,12 +64104,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8921152913750132435, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: apps.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8921152913750132435, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: apps.Array.data[2]
       value: 
       objectReference: {fileID: 2075550918}
+    - target: {fileID: 8921152913750132435, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: apps.Array.data[3]
+      value: 
+      objectReference: {fileID: 924367293}
     - target: {fileID: 8921152913883687582, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -64128,6 +64137,38 @@ PrefabInstance:
     - target: {fileID: 8921152913883687582, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 924367293}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152913883687583, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8921152913910281052, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: m_IsActive
@@ -64268,6 +64309,10 @@ PrefabInstance:
     - target: {fileID: 8921152914764257234, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: uiSlots.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921152914847732013, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8921152914889347623, guid: 006d857fb6e084617a3feccd459ab034, type: 3}
       propertyPath: m_AnchorMax.y

@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void Update() 
@@ -56,13 +58,23 @@ public class PlayerMovement : MonoBehaviour
                 smartphone.SetActive(false);
                 playerPaused = false;
                 speed = 2f;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             } 
             else 
             {
                 smartphone.SetActive(true);
                 playerPaused = true;
                 speed = 0f;
+               
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
+        }
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
         }
     }
 
