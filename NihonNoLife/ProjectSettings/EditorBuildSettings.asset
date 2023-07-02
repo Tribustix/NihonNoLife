@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/NihonNoLife/Scenes/Osaka Streets.unity
+    guid: f577797d2b3424d9c9c13aa14edaa713
+  - enabled: 1
+    path: Assets/NihonNoLife/Scenes/Japanese Academy.unity
+    guid: 888fe75e57dfb4393b7f1b5f9411b4e4
+  - enabled: 1
+    path: Assets/NihonNoLife/Scenes/Konbini.unity
+    guid: f27d88a2309f0ba4386dcd2c027b2a79
+  - enabled: 1
+    path: Assets/NihonNoLife/Scenes/Seka Arcade Bar.unity
+    guid: b0280be5cdfe55f46bf49b535cab003a
+  - enabled: 1
+    path: Assets/NihonNoLife/Scenes/Bakery.unity
+    guid: 028909a57586ae34fb1edd1eee6e8cf7
   m_configObjects: {}
