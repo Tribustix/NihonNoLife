@@ -2,13 +2,13 @@
   "flashCard":
     {
       "wordsEsp": [
-        "autobús",
+        "bus",
         "taxi",
-        "coche",
-        "barco",
-        "bicicleta",
-        "metro",
-        "tren"
+        "car",
+        "boat",
+        "bicycle",
+        "subway",
+        "train"
       ],
 
       "wordsJap": [
