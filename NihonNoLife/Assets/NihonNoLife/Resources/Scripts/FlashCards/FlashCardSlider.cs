@@ -1,42 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlashCardSlider: MonoBehaviour
 {
-    public GameObject ContainerPanel;
-    public GameObject[] Panels;
-    int currentIndex = 0;
-    float containerPositionX;
+    public GameObject scrollbar;
 
-    void Start()
-    {
-        containerPositionX = ContainerPanel.transform.position.x;
-    }
+    private float scrollPostion = 0;
+    private float[] position;
+    private int positonIndex = 0;
 
-    public void SlideToLeft()
+
+    public void Next()
     {
-        if (currentIndex > 0)
+        if(positonIndex < position.Length - 1)
         {
-            currentIndex--;
-            var targetPanel = Panels[currentIndex];
-            float targetPositionX = containerPositionX - targetPanel.transform.position.x;
-            var targetPosition = new Vector3(ContainerPanel.transform.position.x + targetPositionX, ContainerPanel.transform.position.y, ContainerPanel.transform.position.z);
-            iTween.MoveTo(ContainerPanel, targetPosition, 0.5f);
-
+            positonIndex += 1;
+            scrollPostion = position[positonIndex];
         }
     }
 
-    public void SlideToRight()
+    public void Previous()
     {
-        if (currentIndex < Panels.Length - 1)
+        if (positonIndex > 0)
         {
-            currentIndex++;
-            var targetPanel = Panels[currentIndex];
-            float targetPositionX = containerPositionX - targetPanel.transform.position.x;
-            var targetPosition = new Vector3(ContainerPanel.transform.position.x + targetPositionX, ContainerPanel.transform.position.y, ContainerPanel.transform.position.z);
-            iTween.MoveTo(ContainerPanel, targetPosition, 0.5f);
+            positonIndex -= 1;
+            scrollPostion = position[positonIndex];
         }
+    }
+
+    private void Update()
+    {
+        position = new float[transform.childCount];
+
+        float distance = 1f / (position.Length - 1f);
+
+        for (int i = 0; i < position.Length; i++)
+        {
+            position[i] = distance * i;
+        }
+
+        if(Input.GetMouseButton(0))
+        {
+            scrollPostion = scrollbar.GetComponent<Scrollbar>().value;
+        }else
+        {
+            for (int i = 0; i < position.Length; i++)
+            {
+                if(scrollPostion < position[i] + (distance / 2) && scrollPostion > position[i] - (distance / 2))
+                {
+                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, position[i], 0.15f);
+                }
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        positonIndex = 0;
+        scrollPostion = position[positonIndex];
     }
 
 }

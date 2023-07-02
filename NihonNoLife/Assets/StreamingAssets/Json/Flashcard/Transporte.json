@@ -1,0 +1,24 @@
+﻿{
+  "flashCard":
+    {
+      "wordsEsp": [
+        "autobús",
+        "taxi",
+        "coche",
+        "barco",
+        "bicicleta",
+        "metro",
+        "tren"
+      ],
+
+      "wordsJap": [
+        "バース",
+        "タクシー",
+        "車　ー　くるま",
+        "不燃　ー　ふね",
+        "自転車　ー　じてんしゃ",
+        "地下鉄　ー　ちかてつ",
+        "電車　ー　でんしゃ"
+      ]
+    }
+}

@@ -13,7 +13,8 @@ public class SceneTransition : MonoBehaviour
     {
         if(collision.CompareTag("Player") && !collision.isTrigger)
         {
-            playerStorage.initialValue = playerPosition; 
+            playerStorage.initialValue = playerPosition;
+            collision.GetComponent<PlayerMovement>().startingPosition = playerStorage;
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
