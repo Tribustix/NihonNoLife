@@ -56,5 +56,11 @@ public class FlashCardSlider: MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        positonIndex = 0;
+        scrollPostion = position[positonIndex];
+    }
+
 }
 

@@ -1,0 +1,60 @@
+﻿{
+  "flashCard":
+    {
+      "wordsEsp": [
+        "fresa",
+        "platano",
+        "pera",
+        "piña",
+        "melocotón",
+        "kiwi",
+        "manzana",
+        "naranja",
+        "uvas",
+        "melón",
+        "sandía",
+        "mandarina",
+        "ciruela",
+        "aguacate",
+        "limón",
+        "higo",
+        "arandano",
+        "coco",
+        "frambuesa",
+        "granada",
+        "caqui",
+        "cereza",
+        "papaya",
+        "maracuyá",
+        "tomate"
+      ],
+
+      "wordsJap": [
+        "いちご",
+        "バナナ",
+        "梨　ー　なし",
+        "パイナップル",
+        "桃　ー　もも",
+        "キウイ",
+        "りんご",
+        "オレンジ",
+        "ブドウ",
+        "メロン",
+        "スイカ",
+        "みかん",
+        "梅　ー　うめ",
+        "アボカド",
+        "レモン",
+        "イチジク",
+        "ブルーベリー",
+        "ココ",
+        "ラズベリー",
+        "ザクロ",
+        "柿 ー かき",
+        "チェリー",
+        "パパイヤ",
+        "パッションフルーツ",
+        "トマト"
+      ]
+    }
+}

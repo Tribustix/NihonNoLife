@@ -15,12 +15,15 @@ public class PlayerMovement : MonoBehaviour
 
     public VectorValue startingPosition;
 
+    private void Awake()
+    {
+        transform.position = startingPosition.initialValue;
+    }
+
     private void Start() 
     {
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-        transform.position = startingPosition.initialValue;     
     }
 
     private void Update() 
